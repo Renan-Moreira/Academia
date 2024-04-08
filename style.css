@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: var(--branco-normal);
+    font-family: "Lato", sans-serif;
+}
+:root{
+    --rosa: #eb1ccc;
+    --cinza-escuro: #5d5d5d;
+    --cinza-claro: #95989a;
+    --roxo: #840dc9;
+    --preto-normal-escuro: #000;
+    --preto-claro: #343434;
+    --preto-claro2:#3d3d3d;
+    --branco-normal: #fff;
+    --amarelo-normal:#fbff00;
+}
+body{
+    background: linear-gradient(rgb(0,0,0,0.5), rgb(0,0,0,0.5)), 
+    url('https://boaforma.abril.com.br/wp-content/uploads/sites/2/2017/08/just-run.jpg?quality=90&strip=info');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+header h1{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--cinza-claro);
+    font-weight: bold;
+}
+header nav ul{
+    display: flex;
+    gap: 30px;
+}
+header nav ul li{
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+header nav ul li a{
+    padding: 10px;
+    position: relative;
+    transform: 2ms ease-in;
+}
+header nav ul li a:before{
+    content: ' ';
+    width: 0;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    position: absolute;
+    background-color: var(--amarelo-normal);
+    transition: 1.5s ease;
+}
+header nav ul li a:hover:before{
+    width: 100%;
+}
+main{
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main .main-frase h1{
+    font-size: 3em;
+    text-align: center;
+}
+main .frase2 h2{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: var(--cinza-claro);
+}
+main .btns button{
+    margin: 50px 10px;
+    color: var(--branco-normal);
+    text-transform: uppercase;
+    width: 250px;
+    height: 60px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 1px solid var(--branco-normal);
+    position: relative;
+    transform: 2ms ease-in;
+    cursor: pointer;
+}
+main .btns button:hover{
+    color: var(--amarelo-normal);
+    transition: 1s;
+}
+
+main .btns button:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    background-color: var(--preto-claro2);
+    transition: 1.5s ease;
+    z-index: -1;
+    border-radius: 20px;
+}
+main .btns button:hover:before{
+    width: 100%;
+}
+@media(max-width:768px){
+    header{
+        display: none;
+    }
+    main .main-frase h1{
+        width: 100%;
+        
+    }
+    main .btns button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        height: 90px;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+    main .btns button:before{
+        display: none;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
